@@ -84,6 +84,7 @@ const BsFormInputMixin = (superClass) => class extends superClass {
     }
 
     attributeChangedCallback(name, oldval, newval) {
+        super.attributeChangedCallback(name, oldval, newval)
         if (name=='value'){
             const inputElement = this.shadowRoot.querySelector('input');
             if (inputElement){
